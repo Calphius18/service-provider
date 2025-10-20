@@ -1,0 +1,165 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Plumbing",
+      "icon": "https://cdn-icons-png.flaticon.com/512/3030/3030314.png"
+    },
+    {
+      "id": 2,
+      "name": "Electrical",
+      "icon": "https://cdn-icons-png.flaticon.com/512/3659/3659893.png"
+    },
+    {
+      "id": 3,
+      "name": "Cleaning",
+      "icon": "https://cdn-icons-png.flaticon.com/512/1019/1019709.png"
+    },
+    {
+      "id": 4,
+      "name": "Carpentry",
+      "icon": "https://cdn-icons-png.flaticon.com/512/3064/3064182.png"
+    },
+    {
+      "id": 5,
+      "name": "Painting",
+      "icon": "https://cdn-icons-png.flaticon.com/512/3270/3270933.png"
+    }
+  ],
+
+  "providers": [
+    {
+      "id": 1,
+      "name": "John Smith",
+      "categoryId": 1,
+      "rating": 4.7,
+      "pricePerHour": 35,
+      "experienceYears": 6,
+      "location": {
+            "lat": 6.524379,
+            "lng": 3.379206,
+            "city": "Lagos"
+        },
+      "description": "Experienced plumber specializing in bathroom installations, pipe repairs, and leak detection. Quick and reliable service.",
+      "image": "https://randomuser.me/api/portraits/men/32.jpg",
+      "gallery": [
+        "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7",
+        "https://images.unsplash.com/photo-1581579186985-7a3f32e9daab"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Maria Lopez",
+      "categoryId": 3,
+      "rating": 4.9,
+      "pricePerHour": 25,
+      "experienceYears": 4,
+      "location": {
+            "lat": 9.05785,
+            "lng": 7.49508,
+            "city": "Abuja"
+        },
+      "description": "Professional cleaner offering deep cleaning, move-out cleaning, and office cleaning services.",
+      "image": "https://randomuser.me/api/portraits/women/65.jpg",
+      "gallery": [
+        "https://images.unsplash.com/photo-1581574209228-7a38d63a0f74",
+        "https://images.unsplash.com/photo-1564078516393-cf04bd966897"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Ahmed Khan",
+      "categoryId": 2,
+      "rating": 4.5,
+      "pricePerHour": 40,
+      "experienceYears": 8,
+      "location": {
+            "lat": 7.377535,
+            "lng": 3.94704,
+            "city": "Ibadan"
+        },
+      "description": "Certified electrician providing safe installations, rewiring, and troubleshooting for homes and offices.",
+      "image": "https://randomuser.me/api/portraits/men/84.jpg",
+      "gallery": [
+        "https://images.unsplash.com/photo-1565372918674-6b5b1c60f51d",
+        "https://images.unsplash.com/photo-1570891837759-37a37c93a5e2"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Emma Müller",
+      "categoryId": 5,
+      "rating": 4.8,
+      "pricePerHour": 30,
+      "experienceYears": 5,
+      "location": {
+            "lat": 10.315833,
+            "lng": 9.844166,
+            "city": "Jos"
+        },
+      "description": "Creative painter with an eye for detail. Specializes in interior wall designs and color consultation.",
+      "image": "https://randomuser.me/api/portraits/women/45.jpg",
+      "gallery": [
+        "https://images.unsplash.com/photo-1523413363574-c30aa1c2a516",
+        "https://images.unsplash.com/photo-1505852679233-d9fd70aff56d"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Daniel Fischer",
+      "categoryId": 4,
+      "rating": 4.6,
+      "pricePerHour": 38,
+      "experienceYears": 7,
+      "location": {
+            "lat": 4.815554,
+            "lng": 7.049844,
+            "city": "Port Harcourt"
+        },
+      "description": "Skilled carpenter crafting custom furniture and performing wood restoration with precision.",
+      "image": "https://randomuser.me/api/portraits/men/71.jpg",
+      "gallery": [
+        "https://images.unsplash.com/photo-1570132257807-d502b37ff7da",
+        "https://images.unsplash.com/photo-1590642813630-5dbcd37f9c5b"
+      ]
+    }
+  ],
+
+  "bookings": [
+    {
+      "id": 1,
+      "providerId": 1,
+      "userId": 101,
+      "date": "2025-10-20",
+      "time": "14:00",
+      "hours": 3,
+      "totalCost": 105,
+      "status": "confirmed"
+    },
+    {
+      "id": 2,
+      "providerId": 2,
+      "userId": 102,
+      "date": "2025-10-22",
+      "time": "10:00",
+      "hours": 2,
+      "totalCost": 50,
+      "status": "pending"
+    }
+  ],
+
+  "users": [
+    {
+      "id": 101,
+      "name": "Lisa Brown",
+      "email": "lisa.brown@example.com",
+      "avatar": "https://randomuser.me/api/portraits/women/56.jpg"
+    },
+    {
+      "id": 102,
+      "name": "Mark Taylor",
+      "email": "mark.taylor@example.com",
+      "avatar": "https://randomuser.me/api/portraits/men/48.jpg"
+    }
+  ]
+}
