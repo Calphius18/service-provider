@@ -8,8 +8,10 @@ export const useStore = create<StoreState>((set) => ({
   setSelectedProvider: (provider) => set({ selectedProvider: provider }),
 
   bookings: [],
+  setBookings: (bookings: Booking[]) => set({ bookings }),
   addBooking: (booking) =>
     set((state) => ({
       bookings: [...state.bookings, booking],
     })),
 }));
+

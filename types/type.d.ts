@@ -71,12 +71,6 @@ declare interface RatingProps {
   color?: string;
 }
 
-// declare interface SearchBarProps {
-//   placeholder?: string;
-//   value: string;
-//   onChange: (text: string) => void;
-// }
-
 declare interface ProvidersListProps {
   navigation: any;
 }
@@ -85,3 +79,5 @@ declare interface ProviderDetailsProps {
   route: { params: { id: number } };
   navigation: any;
 }
+
+// User

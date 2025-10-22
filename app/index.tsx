@@ -57,7 +57,7 @@ export default function Home() {
   if (!providers.length)
     return (
       <SafeAreaView className="flex-1 justify-center items-center bg-white">
-        <Text className="text-gray-500 text-[15px] font-[Jakarta-Medium]">
+        <Text className="text-gray-500 text-[15px] font-JakartaMedium">
           No providers available
         </Text>
       </SafeAreaView>
@@ -67,7 +67,7 @@ export default function Home() {
     <SafeAreaView className="flex-1 bg-gray-50 p-3">
       {/* Header */}
       <View className="justify-center items-center mb-4">
-        <Text className="text-[20px] text-neutral-900 font-[Jakarta-Bold]">
+        <Text className="text-[20px] text-neutral-900 font-JakartaBold">
           Providers
         </Text>
       </View>
@@ -80,7 +80,7 @@ export default function Home() {
           }`}
         >
           <Text
-            className={`text-[13px] font-[Jakarta-Medium] ${
+            className={`text-[13px] font-Jakarta-Medium ${
               selectedCat === null ? "text-white" : "text-neutral-800"
             }`}
           >
@@ -102,7 +102,7 @@ export default function Home() {
           >
             <Image source={{ uri: category.icon }} className="w-4 h-4 mr-1.5" />
             <Text
-              className={`text-[13px] font-[Jakarta-Medium] ${
+              className={`text-[13px] font-Jakarta-Medium ${
                 selectedCat === Number(category.id)
                   ? "text-white"
                   : "text-neutral-800"
@@ -114,7 +114,7 @@ export default function Home() {
         ))}
       </View>
 
-      <View className="mt-2 mb-1">
+      <View className="mt-2 mb-3 f">
         <Text className="text-2xl font-JakartaSemiBold text-neutral-800">
           Available Providers
         </Text>

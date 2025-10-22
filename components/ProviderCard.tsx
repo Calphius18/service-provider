@@ -45,7 +45,7 @@ export default function ProviderCard({
           </View>
 
           <View className="flex-row items-center justify-between mt-2">
-            <Text className="text-[13px] text-neutral-700 font-[Jakarta-Medium]">
+            <Text className="text-[13px] text-neutral-700 font-Jakarta-Medium">
               ⭐ {provider.rating}
             </Text>
             <Text className="text-[13px] text-black font-[Jakarta-SemiBold]">

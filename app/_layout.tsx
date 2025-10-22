@@ -30,8 +30,8 @@ export default function RootLayout() {
   return (
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
-      <Stack.Screen name="provider/[id]" options={{  headerShown: false }} />
-      <Stack.Screen name="bookings/index" options={{ title: "My Bookings" }} />
+      <Stack.Screen name="provider/[id]" options={{ headerShown: false }} />
+      <Stack.Screen name="bookings/index" options={{ headerShown: false }} />
       </Stack>
     
   );
