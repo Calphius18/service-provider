@@ -4,9 +4,9 @@ import { Modal, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 interface FilterRatingProps {
   visible: boolean;
-  setVisible: (v: boolean) => void;
+  setVisible: (vis: boolean) => void;
   ratingFilter: number | null;
-  setRatingFilter: (v: number | null) => void;
+  setRatingFilter: (vis: number | null) => void;
 }
 
 export default function FilterRating({

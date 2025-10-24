@@ -14,7 +14,7 @@ export default function ProviderCard({
       animate={{ opacity: 1, translateY: 0 }}
       transition={{ type: "timing", duration: 300 }}
     >
-      <View className="flex-row items-center bg-white rounded-2xl p-4 mb-3 shadow">
+      <View className="flex-row border items-center bg-white rounded-2xl p-4 mb-3 shadow-lg">
         <Image
           source={{ uri: provider.image }}
           className="w-[75px] h-[75px] rounded-xl mr-3 bg-gray-100"
@@ -29,7 +29,7 @@ export default function ProviderCard({
             <TouchableOpacity
               onPress={onPress}
               activeOpacity={0.9}
-              className="bg-green-500/75 px-3 py-1.5 rounded-full"
+              className="bg-green-500/75 px-3 py-1.5 border rounded-full"
             >
               <Text className="text-base text-center text-black font-JakartaBold">
                 View Details

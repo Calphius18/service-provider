@@ -18,10 +18,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 export default function Home() {
   const { providers, setProviders } = useStore();
   const [categories, setCategories] = useState<Category[]>([]);
-  const [loading, setLoading] = useState(true);
   const [selectedCat, setSelectedCat] = useState<number | null>(null);
+  const [loading, setLoading] = useState(true);
 
-  // New states for modal & rating filter
   const [filterVisible, setFilterVisible] = useState(false);
   const [ratingFilter, setRatingFilter] = useState<number | null>(null);
 
@@ -91,7 +90,7 @@ export default function Home() {
           {/* Filter button */}
           <TouchableOpacity
             onPress={() => setFilterVisible(true)}
-            className="flex-row items-center px-3 py-1.5 rounded-full bg-gray-200 border mr-2"
+            className="flex-row items-center px-3 py-1.5 rounded-full bg-gray-300 border mr-2"
           >
             <Feather name="filter" size={18} color="#000" />
             <Text className="ml-2 text-[14px] text-black font-JakartaMedium">
@@ -116,7 +115,7 @@ export default function Home() {
       <View className="flex-row flex-wrap mb-3">
         <TouchableOpacity
           onPress={() => setSelectedCat(null)}
-          className={`flex-row items-center px-3 py-1.5 rounded-full mr-2 mb-2 ${
+          className={`flex-row items-center px-3 py-1.5 rounded-full border mr-2 mb-2 ${
             selectedCat === null ? "bg-black" : "bg-green-500/5"
           }`}
         >
@@ -137,7 +136,7 @@ export default function Home() {
                 category.id === selectedCat ? null : Number(category.id)
               )
             }
-            className={`flex-row items-center px-3 py-1.5 rounded-full mr-2 mb-2 ${
+            className={`flex-row items-center px-3 py-1.5 rounded-full border mr-2 mb-2 ${
               selectedCat === Number(category.id)
                 ? "bg-black/75"
                 : "bg-green-500/5"
@@ -158,7 +157,7 @@ export default function Home() {
       </View>
 
       {/* Providers List */}
-      <View className="mt-2 mb-3">
+      <View className="mt-2 border-b border-gray-200 pb-3  mb-3">
         <Text className="text-2xl font-JakartaSemiBold text-neutral-800">
           Available Providers
         </Text>

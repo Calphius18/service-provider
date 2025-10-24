@@ -28,7 +28,7 @@ export default function BookingModal({
 
   const total = provider.pricePerHour * hours;
 
-  // ✅ Android-friendly sequential date + time picker
+  // Android sequential date + time picker
   const handleDatePress = () => {
     if (Platform.OS === "android") {
       DateTimePickerAndroid.open({
@@ -59,7 +59,7 @@ export default function BookingModal({
         },
       });
     } else {
-      // ✅ For iOS, toggle inline picker
+      // For iOS, toggle inline picker
       setShowPicker(!showPicker);
     }
   };

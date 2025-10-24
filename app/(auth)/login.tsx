@@ -39,7 +39,7 @@ export default function LoginScreen() {
 
   return (
     <LinearGradient
-      colors={["#93C5FD", "#E5E7EB", "#60A5FA"]}
+      colors={["#93C5FD", "#E5E7EB", "#93C5FD"]}
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 1 }}
       className="flex-1 justify-center px-6"
@@ -54,7 +54,7 @@ export default function LoginScreen() {
         value={email}
         onChangeText={setEmail}
         keyboardType="email-address"
-        className="border-[5px] border-gray-300 rounded-2xl px-4 py-3 mb-4 text-[15px] text-black bg-white/70"
+        className="border-[2px] border-gray-300 rounded-2xl px-4 py-3 mb-4 text-[15px] text-black bg-white/70"
       />
 
       <TextInput
@@ -63,7 +63,7 @@ export default function LoginScreen() {
         value={password}
         onChangeText={setPassword}
         secureTextEntry
-        className="border-[5px] border-gray-300 rounded-2xl px-4 py-3 mb-3 text-[15px] text-black bg-white/70"
+        className="border-[2px] border-gray-300 rounded-2xl px-4 py-3 mb-3 text-[15px] text-black bg-white/70"
       />
 
       {error ? (

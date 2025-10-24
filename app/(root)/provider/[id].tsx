@@ -68,9 +68,8 @@ export default function ProviderDetails() {
         const foundProvider = provRes.data;
         setProvider(foundProvider);
 
-        // sync Zustand
-        const exists = providers.find((p) => p.id === foundProvider.id);
-        if (!exists) setProviders([...providers, foundProvider]);
+        const available = providers.find((p) => p.id === foundProvider.id);
+        if (!available) setProviders([...providers, foundProvider]);
 
         const foundCategory = catRes.data.find(
           (c: Category) => Number(c.id) === Number(foundProvider.categoryId)
@@ -110,7 +109,7 @@ export default function ProviderDetails() {
   if (loading)
     return (
       <SafeAreaView className="flex-1 bg-gray-100">
-        {/* Simple shimmer skeleton */}
+        {/* Shimmer Skeleton */}
         <Animated.View
           style={{
             width: "100%",
@@ -185,19 +184,14 @@ export default function ProviderDetails() {
               onPress={() => router.back()}
               style={{
                 padding: 8,
-                backgroundColor: "rgba(255,255,255,0.15)",
+                backgroundColor: "#ffffff",
                 borderRadius: 999,
               }}
             >
-              <ChevronLeft color="white" size={24} />
+              <ChevronLeft color="black" size={24} />
             </TouchableOpacity>
 
-            <Text
-              style={{
-                color: "white",
-                fontFamily: "Jakarta-SemiBold",
-                fontSize: 16,
-              }}
+            <Text className="text-white font-JakartaSemiBold text-xl"
             >
               Service Details
             </Text>
@@ -205,9 +199,9 @@ export default function ProviderDetails() {
             <View style={{ width: 24 }} />
           </BlurView>
 
-          {/* Title + Category */}
+          {/* Name + Category */}
           <View className="absolute bottom-6 left-5">
-            <Text className="text-white text-[24px] font-[Jakarta-Bold]">
+            <Text className="text-white text-2xl font-JakartaBold">
               {provider.name}
             </Text>
 
@@ -219,7 +213,7 @@ export default function ProviderDetails() {
                   resizeMode="contain"
                 />
               )}
-              <Text className="text-white text-[13px] font-[Jakarta-Medium]">
+              <Text className="text-white text-md font-JakartaMedium">
                 {category?.name ?? "Unknown"} •{" "}
                 {provider.location?.city ?? "No city"}
               </Text>
@@ -229,10 +223,10 @@ export default function ProviderDetails() {
 
         {/* Info */}
         <View className="px-5 py-2">
-          <Text className="text-[13px] text-gray-500 font-[Jakarta-Medium]">
+          <Text className="text-[13px] text-gray-500 font-JakartaMedium">
             {provider.experienceYears} years of experience
           </Text>
-          <Text className="text-[14px] text-neutral-700 font-[Jakarta-Medium] mt-1">
+          <Text className="text-[14px] text-neutral-700 font-JakartaMedium mt-1">
             ⭐ {provider.rating} · ₦{provider.pricePerHour}/hr
           </Text>
           <Text className="text-[15px] text-gray-700 font-JakartaMedium mt-4 leading-6">
@@ -242,11 +236,11 @@ export default function ProviderDetails() {
           {/* Gallery */}
           {gallery?.length ? (
             <View className="mt-5">
-              <Text className="text-[16px] font-[Jakarta-SemiBold] mb-2 text-neutral-900">
+              <Text className="text-[16px] font-JakartaSemiBold mb-2 text-neutral-900">
                 Work Gallery
               </Text>
               <ScrollView
-                horizontal
+                horizontal 
                 showsHorizontalScrollIndicator={false}
                 contentContainerStyle={{ paddingRight: 20 }}
               >
@@ -264,7 +258,7 @@ export default function ProviderDetails() {
 
           {/* Map */}
           <View className="mt-6">
-            <Text className="text-[16px] font-[Jakarta-SemiBold] text-neutral-900">
+            <Text className="text-[16px] font-JakartaSemiBold text-neutral-900">
               Map Location
             </Text>
             <View className="mt-4 rounded-3xl overflow-hidden">
@@ -295,7 +289,7 @@ export default function ProviderDetails() {
             onPress={() => setMapExpanded(true)}
             className="mt-3"
           >
-            <Text className="text-center text-gray-500 text-[13px]">
+            <Text className="text-center text-gray-500 font-JakartaMedium text-[13px]">
               Tap to expand map
             </Text>
           </TouchableOpacity>
