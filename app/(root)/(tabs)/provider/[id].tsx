@@ -1,3 +1,4 @@
+import { getCategories, getProvider, postBooking } from "@/api/api";
 import BookingModal from "@/components/BookingModal";
 import { BlurView } from "expo-blur";
 import { LinearGradient } from "expo-linear-gradient";
@@ -17,8 +18,7 @@ import {
 import MapView, { Marker } from "react-native-maps";
 import ReactNativeModal from "react-native-modal";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { getCategories, getProvider, postBooking } from "../../../api/api";
-import { useStore } from "../../../store/useStore";
+import { useStore } from "../../../../store/useStore";
 
 const { width } = Dimensions.get("window");
 
